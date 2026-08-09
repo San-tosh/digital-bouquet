@@ -173,6 +173,54 @@
   .play .replay { animation: fadein .8s ease 5s forwards; }
   .replay:hover { background: rgba(255, 255, 255, .22); }
 
+  /* ---------- gift intro screen ---------- */
+  .intro {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 24px;
+    text-align: center;
+    background: linear-gradient(180deg,
+      #171033 0%, #2a1b4e 34%, #46296b 58%, #7c4479 78%, #c987a1 100%);
+    transition: opacity .9s ease;
+  }
+  .intro.open { opacity: 0; pointer-events: none; }
+  .gift {
+    font-size: clamp(70px, 20vmin, 120px);
+    animation: bounce 1.6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 24px rgba(255, 150, 200, .35));
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50%      { transform: translateY(-16px) rotate(2deg); }
+  }
+  .intro h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #ffd9e8;
+    font-size: clamp(1.5rem, 6.5vw, 2.3rem);
+    text-shadow: 0 0 22px rgba(255, 160, 200, .4);
+  }
+  .gift-btn {
+    background: rgba(255, 255, 255, .14);
+    border: 1.5px solid rgba(255, 217, 232, .55);
+    color: #ffd9e8;
+    font-family: inherit;
+    font-size: 1.05rem;
+    padding: 14px 30px;
+    border-radius: 999px;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: transform .35s cubic-bezier(.3, 1.5, .5, 1);
+  }
+  .gift-btn:hover { background: rgba(255, 255, 255, .24); }
+
   /* ---------- phones ---------- */
   @media (max-width: 480px) {
     svg.bouquet { width: min(92vw, 400px); max-height: 46dvh; }
@@ -195,7 +243,13 @@
   }
 </style>
 </head>
-<body class="play">
+<body>
+
+<div class="intro" id="intro">
+  <div class="gift">🎁</div>
+  <h2>Pssst… Angky, there's a surprise for you</h2>
+  <button class="gift-btn" id="giftBtn" type="button">🎀 Click here to open it</button>
+</div>
 
 <div class="scene">
   <div class="bouquet-wrap">
@@ -525,6 +579,24 @@
     void document.body.offsetWidth; // restart CSS animations
     document.body.classList.add("play");
   }
+
+  // teasing gift button: dodges 3 times, then opens the bouquet
+  const giftBtn = document.getElementById("giftBtn");
+  const intro = document.getElementById("intro");
+  const teases = ["hehe, missed! 😜", "almost got it! 🙈", "okay okay… click me! 💝"];
+  let dodges = 0;
+  giftBtn.addEventListener("click", () => {
+    if (dodges < teases.length) {
+      const x = (Math.random() - .5) * Math.min(innerWidth * .55, 280);
+      const y = (Math.random() - .5) * Math.min(innerHeight * .35, 220);
+      giftBtn.style.transform = `translate(${x}px, ${y}px)`;
+      giftBtn.textContent = teases[dodges++];
+    } else {
+      intro.classList.add("open");
+      setTimeout(() => intro.remove(), 950);
+      document.body.classList.add("play");
+    }
+  });
 </script>
 </body>
 </html>
