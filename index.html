@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>A Bouquet for Angky 🌸</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,7 @@
   body {
     min-height: 100dvh;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
     font-family: "Quicksand", system-ui, sans-serif;
     background: linear-gradient(180deg,
       #171033 0%, #2a1b4e 34%, #46296b 58%, #7c4479 78%, #c987a1 100%);
@@ -58,7 +59,7 @@
     align-items: center;
     justify-content: center;
     gap: clamp(6px, 1.6vmin, 16px);
-    padding: 24px 20px 40px;
+    padding: calc(20px + env(safe-area-inset-top)) 20px calc(36px + env(safe-area-inset-bottom));
     text-align: center;
   }
   .bouquet-wrap { position: relative; }
@@ -135,21 +136,21 @@
     font-family: "Cormorant Garamond", Georgia, serif;
     font-style: italic;
     font-weight: 600;
-    font-size: clamp(2rem, 7.5vmin, 3.2rem);
+    font-size: clamp(2rem, 8vw, 3.2rem);
     color: #ffd9e8;
     text-shadow: 0 0 26px rgba(255, 160, 200, .45);
     margin-bottom: .4em;
   }
   .msg p {
     color: #ecdcf7;
-    font-size: clamp(.95rem, 3.4vmin, 1.15rem);
+    font-size: clamp(1rem, 4.2vw, 1.15rem);
     line-height: 1.65;
   }
   .msg .msg-line2 {
     margin-top: .8em;
     font-family: "Cormorant Garamond", Georgia, serif;
     font-style: italic;
-    font-size: clamp(1.05rem, 3.8vmin, 1.3rem);
+    font-size: clamp(1.1rem, 4.8vw, 1.3rem);
     color: #ffd9e8;
   }
 
@@ -168,6 +169,13 @@
   }
   .play .replay { animation: fadein .8s ease 5s forwards; }
   .replay:hover { background: rgba(255, 255, 255, .22); }
+
+  /* ---------- phones ---------- */
+  @media (max-width: 480px) {
+    svg.bouquet { width: min(92vw, 400px); max-height: 52dvh; }
+    .scene { gap: 4px; }
+    .replay { padding: 10px 22px; font-size: .95rem; } /* comfortable tap target */
+  }
 
   /* ---------- reduced motion: show everything, skip the show ---------- */
   @media (prefers-reduced-motion: reduce) {
