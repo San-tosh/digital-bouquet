@@ -11,13 +11,16 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html {
+    min-height: 100%;
+    background: linear-gradient(180deg,
+      #171033 0%, #2a1b4e 34%, #46296b 58%, #7c4479 78%, #c987a1 100%);
+  }
   body {
     min-height: 100dvh;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     font-family: "Quicksand", system-ui, sans-serif;
-    background: linear-gradient(180deg,
-      #171033 0%, #2a1b4e 34%, #46296b 58%, #7c4479 78%, #c987a1 100%);
   }
 
   /* ---------- twinkling stars (created by JS) ---------- */
@@ -172,8 +175,9 @@
 
   /* ---------- phones ---------- */
   @media (max-width: 480px) {
-    svg.bouquet { width: min(92vw, 400px); max-height: 52dvh; }
-    .scene { gap: 4px; }
+    svg.bouquet { width: min(92vw, 400px); max-height: 46dvh; }
+    .scene { gap: 4px; padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+    .msg p { line-height: 1.5; }
     .replay { padding: 10px 22px; font-size: .95rem; } /* comfortable tap target */
   }
 
