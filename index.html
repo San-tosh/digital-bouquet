@@ -22,6 +22,8 @@
     -webkit-text-size-adjust: 100%;
     font-family: "Quicksand", system-ui, sans-serif;
   }
+  /* no scrolling while the gift intro is up */
+  body:not(.play) { overflow: hidden; height: 100dvh; }
 
   /* ---------- twinkling stars (created by JS) ---------- */
   .star {
