@@ -13,7 +13,7 @@
 
   body {
     min-height: 100dvh;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: "Quicksand", system-ui, sans-serif;
     background: linear-gradient(180deg,
       #171033 0%, #2a1b4e 34%, #46296b 58%, #7c4479 78%, #c987a1 100%);
@@ -75,6 +75,7 @@
   svg.bouquet {
     position: relative;
     width: min(84vmin, 460px);
+    max-height: 56dvh;
     height: auto;
     filter: drop-shadow(0 10px 28px rgba(20, 8, 40, .55));
   }
@@ -237,7 +238,7 @@
       <!-- ======================= flowers ======================= -->
 
       <!-- orange poppy -->
-      <g class="flower" transform="translate(148 148)" style="--bd:1.9s">
+      <g transform="translate(148 148)"><g class="flower" style="--bd:1.9s">
         <circle r="40" cy="4" fill="#f07430" opacity=".55" filter="url(#wc)"/>
         <path d="M-27 8 C -32 -18, -15 -36, 2 -36 C 21 -36, 31 -16, 25 8 C 19 25, -19 25, -27 8 Z"
               fill="#f27a2c" stroke="#1c1c1c" stroke-width="2.4"/>
@@ -248,10 +249,10 @@
           <circle cx="-6" cy="-12" r="1.4"/><circle cx="-1" cy="-14" r="1.4"/><circle cx="4" cy="-12" r="1.4"/>
           <circle cx="-4" cy="-8" r="1.4"/><circle cx="2" cy="-8" r="1.4"/>
         </g>
-      </g>
+      </g></g>
 
       <!-- little cream daisy -->
-      <g class="flower" transform="translate(212 128) scale(.95)" style="--bd:2.1s">
+      <g transform="translate(212 128) scale(.95)"><g class="flower" style="--bd:2.1s">
         <circle r="30" fill="#f5ecc9" opacity=".5" filter="url(#wc)"/>
         <g fill="#fbf4e0" stroke="#1c1c1c" stroke-width="1.3">
           <ellipse cx="0" cy="-17" rx="4.4" ry="13"/>
@@ -272,10 +273,10 @@
           <circle cx="-3" cy="-2" r="1.1"/><circle cx="2" cy="-3" r="1.1"/>
           <circle cx="3" cy="2" r="1.1"/><circle cx="-2" cy="3" r="1.1"/>
         </g>
-      </g>
+      </g></g>
 
       <!-- pale blue anemone -->
-      <g class="flower" transform="translate(280 152)" style="--bd:2.3s">
+      <g transform="translate(280 152)"><g class="flower" style="--bd:2.3s">
         <circle r="42" fill="#cfe3e0" opacity=".55" filter="url(#wc)"/>
         <g fill="#e9f1ee" stroke="#1c1c1c" stroke-width="2.2">
           <path d="M0 -6 C 14 -10, 21 -30, 9 -43 C 3 -49, -3 -49, -9 -43 C -21 -30, -14 -10, 0 -6 Z"/>
@@ -293,10 +294,10 @@
           <circle cx="0" cy="14" r="1.3"/><circle cx="-10" cy="10" r="1.3"/>
           <circle cx="-14" cy="0" r="1.3"/><circle cx="-10" cy="-10" r="1.3"/>
         </g>
-      </g>
+      </g></g>
 
       <!-- big peach carnation -->
-      <g class="flower" transform="translate(170 242)" style="--bd:2.5s">
+      <g transform="translate(170 242)"><g class="flower" style="--bd:2.5s">
         <circle r="56" fill="#f6b89a" opacity=".55" filter="url(#wc)"/>
         <g fill="#f6c7ad" stroke="#1c1c1c" stroke-width="2.2">
           <path d="M0 -6 C 20 -10, 33 -33, 18 -53 C 8 -66, -8 -66, -18 -53 C -33 -33, -20 -10, 0 -6 Z"/>
@@ -319,10 +320,10 @@
         </g>
         <path d="M-10 -8 C -14 2, -6 10, 2 8 C 10 6, 12 -4, 6 -9 C 0 -14, -8 -13, -10 -6"
               fill="#f6c7ad" stroke="#1c1c1c" stroke-width="1.8"/>
-      </g>
+      </g></g>
 
       <!-- hot pink gerbera -->
-      <g class="flower" transform="translate(288 240)" style="--bd:2.7s">
+      <g transform="translate(288 240)"><g class="flower" style="--bd:2.7s">
         <circle r="50" fill="#ef4fa0" opacity=".55" filter="url(#wc)"/>
         <g fill="#e8399b" stroke="#8f0f57" stroke-width="1.4">
           <path d="M0 -8 C 5 -16, 6 -34, 0 -45 C -6 -34, -5 -16, 0 -8 Z"/>
@@ -360,10 +361,10 @@
           <path d="M-4 -3 L4 3"/><path d="M-4 3 L4 -3"/>
           <path d="M0 -5 L0 5"/><path d="M-5 0 L5 0"/>
         </g>
-      </g>
+      </g></g>
 
       <!-- red rose -->
-      <g class="flower" transform="translate(222 326)" style="--bd:2.9s">
+      <g transform="translate(222 326)"><g class="flower" style="--bd:2.9s">
         <circle r="46" fill="#d84040" opacity=".55" filter="url(#wc)"/>
         <path d="M0 -37 C 23 -37, 37 -21, 37 1 C 37 23, 21 37, -1 37 C -23 37, -37 21, -37 -1 C -37 -22, -21 -37, 0 -37 Z"
               fill="#d13a3a" stroke="#1c1c1c" stroke-width="2.4"/>
@@ -371,15 +372,15 @@
               fill="none" stroke="#1c1c1c" stroke-width="2" stroke-linecap="round"/>
         <path d="M-30 -14 C -34 -2, -33 10, -26 20" fill="none" stroke="#1c1c1c" stroke-width="1.6"/>
         <path d="M30 -14 C 34 -2, 33 10, 26 20" fill="none" stroke="#1c1c1c" stroke-width="1.6"/>
-      </g>
+      </g></g>
 
       <!-- sparkles -->
       <g fill="#fff">
-        <path class="sparkle" style="--bd:3.6s" transform="translate(120 96)"  d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/>
-        <path class="sparkle" style="--bd:4.1s" transform="translate(340 100) scale(.8)" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/>
-        <path class="sparkle" style="--bd:4.6s" transform="translate(88 200) scale(.7)"  d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/>
-        <path class="sparkle" style="--bd:5s"   transform="translate(372 210) scale(.9)" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/>
-        <path class="sparkle" style="--bd:5.4s" transform="translate(230 62)" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/>
+        <g transform="translate(120 96)"><path class="sparkle" style="--bd:3.6s" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/></g>
+        <g transform="translate(340 100) scale(.8)"><path class="sparkle" style="--bd:4.1s" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/></g>
+        <g transform="translate(88 200) scale(.7)"><path class="sparkle" style="--bd:4.6s" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/></g>
+        <g transform="translate(372 210) scale(.9)"><path class="sparkle" style="--bd:5s" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/></g>
+        <g transform="translate(230 62)"><path class="sparkle" style="--bd:5.4s" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/></g>
       </g>
     </svg>
   </div>
