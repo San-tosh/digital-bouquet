@@ -126,7 +126,7 @@
     opacity: 0;
     max-width: 34rem;
   }
-  .play .msg { animation: rise 1.2s ease 3.4s forwards; }
+  .play .msg { animation: rise 1.2s ease 3.9s forwards; }
   @keyframes rise {
     from { opacity: 0; transform: translateY(18px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -145,6 +145,13 @@
     font-size: clamp(.95rem, 3.4vmin, 1.15rem);
     line-height: 1.65;
   }
+  .msg .msg-line2 {
+    margin-top: .8em;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: clamp(1.05rem, 3.8vmin, 1.3rem);
+    color: #ffd9e8;
+  }
 
   .replay {
     margin-top: 6px;
@@ -159,7 +166,7 @@
     cursor: pointer;
     backdrop-filter: blur(4px);
   }
-  .play .replay { animation: fadein .8s ease 4.4s forwards; }
+  .play .replay { animation: fadein .8s ease 5s forwards; }
   .replay:hover { background: rgba(255, 255, 255, .22); }
 
   /* ---------- reduced motion: show everything, skip the show ---------- */
@@ -374,6 +381,82 @@
         <path d="M30 -14 C 34 -2, 33 10, 26 20" fill="none" stroke="#1c1c1c" stroke-width="1.6"/>
       </g></g>
 
+      <!-- lavender daisy -->
+      <g transform="translate(104 214) scale(.85)"><g class="flower" style="--bd:3.05s">
+        <circle r="30" fill="#c9aef0" opacity=".5" filter="url(#wc)"/>
+        <g fill="#d9c6f2" stroke="#1c1c1c" stroke-width="1.3">
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(30)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(150)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(210)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(300)"/>
+          <ellipse cx="0" cy="-17" rx="4.4" ry="13" transform="rotate(330)"/>
+        </g>
+        <circle r="8" fill="#f0b02c" stroke="#1c1c1c" stroke-width="1.5"/>
+      </g></g>
+
+      <!-- pink rose -->
+      <g transform="translate(352 188) scale(.9)"><g class="flower" style="--bd:3.15s">
+        <circle r="42" fill="#e86a9e" opacity=".5" filter="url(#wc)"/>
+        <path d="M0 -34 C 21 -34, 34 -19, 34 1 C 34 21, 19 34, -1 34 C -21 34, -34 19, -34 -1 C -34 -20, -19 -34, 0 -34 Z"
+              fill="#e8659c" stroke="#1c1c1c" stroke-width="2.2"/>
+        <path d="M0 -24 C 18 -22, 26 -6, 19 9 C 12 22, -12 22, -19 9 C -25 -3, -17 -16, -2 -16 C 11 -16, 17 -7, 12 2 C 8 10, -6 10, -9 3"
+              fill="none" stroke="#1c1c1c" stroke-width="1.9" stroke-linecap="round"/>
+      </g></g>
+
+      <!-- peach poppy -->
+      <g transform="translate(338 306) rotate(10) scale(.82)"><g class="flower" style="--bd:3.25s">
+        <circle r="38" cy="4" fill="#f5a05e" opacity=".5" filter="url(#wc)"/>
+        <path d="M-27 8 C -32 -18, -15 -36, 2 -36 C 21 -36, 31 -16, 25 8 C 19 25, -19 25, -27 8 Z"
+              fill="#f2925c" stroke="#1c1c1c" stroke-width="2.2"/>
+        <path d="M-13 -31 C -17 -12, -15 6, -7 16" fill="none" stroke="#1c1c1c" stroke-width="1.6"/>
+        <path d="M11 -31 C 15 -12, 13 8, 5 16" fill="none" stroke="#1c1c1c" stroke-width="1.6"/>
+        <ellipse cx="-1" cy="-10" rx="12" ry="9" fill="#e8a20c" stroke="#1c1c1c" stroke-width="1.6"/>
+        <g fill="#1c1c1c">
+          <circle cx="-5" cy="-11" r="1.3"/><circle cx="1" cy="-13" r="1.3"/><circle cx="4" cy="-9" r="1.3"/>
+        </g>
+      </g></g>
+
+      <!-- white mini daisy -->
+      <g transform="translate(128 348) scale(.7)"><g class="flower" style="--bd:3.35s">
+        <circle r="28" fill="#f5ecc9" opacity=".5" filter="url(#wc)"/>
+        <g fill="#fbf4e0" stroke="#1c1c1c" stroke-width="1.4">
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(36)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(108)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(252)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(288)"/>
+          <ellipse cx="0" cy="-17" rx="4.6" ry="13" transform="rotate(324)"/>
+        </g>
+        <circle r="8" fill="#f0b02c" stroke="#1c1c1c" stroke-width="1.5"/>
+      </g></g>
+
+      <!-- small pink blossom, top -->
+      <g transform="translate(254 84) scale(.8)"><g class="flower" style="--bd:3.45s">
+        <circle r="34" fill="#f78bb5" opacity=".5" filter="url(#wc)"/>
+        <g fill="#f7a8c4" stroke="#1c1c1c" stroke-width="1.9">
+          <path d="M0 -5 C 12 -8, 18 -25, 8 -36 C 3 -41, -3 -41, -8 -36 C -18 -25, -12 -8, 0 -5 Z"/>
+          <path d="M0 -5 C 12 -8, 18 -25, 8 -36 C 3 -41, -3 -41, -8 -36 C -18 -25, -12 -8, 0 -5 Z" transform="rotate(72)"/>
+          <path d="M0 -5 C 12 -8, 18 -25, 8 -36 C 3 -41, -3 -41, -8 -36 C -18 -25, -12 -8, 0 -5 Z" transform="rotate(144)"/>
+          <path d="M0 -5 C 12 -8, 18 -25, 8 -36 C 3 -41, -3 -41, -8 -36 C -18 -25, -12 -8, 0 -5 Z" transform="rotate(216)"/>
+          <path d="M0 -5 C 12 -8, 18 -25, 8 -36 C 3 -41, -3 -41, -8 -36 C -18 -25, -12 -8, 0 -5 Z" transform="rotate(288)"/>
+        </g>
+        <circle r="7.5" fill="#f2c518" stroke="#1c1c1c" stroke-width="1.6"/>
+        <g fill="#8a5a00">
+          <circle cx="-2.5" cy="-2" r="1"/><circle cx="2.5" cy="-2" r="1"/><circle cx="0" cy="3" r="1"/>
+        </g>
+      </g></g>
+
       <!-- sparkles -->
       <g fill="#fff">
         <g transform="translate(120 96)"><path class="sparkle" style="--bd:3.6s" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/></g>
@@ -389,10 +472,13 @@
   <div class="msg">
     <h1>Happy Birthday, Angky! 🌸</h1>
     <p>
-      Angky Angdembe — here's a bouquet that will never wilt,
-      for a friend who makes every day a little brighter.
-      Wishing you the happiest of birthdays and a year filled
-      with everything you love. 💐
+      Angky Angdembe — if wishes were flowers, I would send you a whole garden.
+      Instead, here is a bouquet that will never wilt, for someone whose smile
+      makes the world softer and every ordinary day a little more beautiful.
+    </p>
+    <p class="msg-line2">
+      May this year give back to you all the warmth and light you so easily
+      give to everyone around you. Bloom brightly, always. 💐✨
     </p>
   </div>
   <!-- --------------------------------------------------------------------- -->
