@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="lock">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -23,7 +23,7 @@
     font-family: "Quicksand", system-ui, sans-serif;
   }
   /* no scrolling while the gift intro is up */
-  body:not(.play) { overflow: hidden; height: 100dvh; }
+  html.lock, html.lock body { overflow: hidden; height: 100dvh; }
 
   /* ---------- twinkling stars (created by JS) ---------- */
   .star {
@@ -607,6 +607,7 @@
     } else {
       intro.classList.add("open");
       setTimeout(() => intro.remove(), 950);
+      document.documentElement.classList.remove("lock");
       document.body.classList.add("play");
     }
   });
